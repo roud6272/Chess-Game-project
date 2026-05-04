@@ -36,3 +36,26 @@ Controls:
 Board:
 - A to H columns
 - 1 to 8 rows
+Chess Game Developer Guide
+
+Architecture:
+- Board class → manages squares and players
+- Piece class → base logic for all pieces
+- Player class → stores pieces and captured pieces
+
+Flow:
+1. Game starts in startGame()
+2. Board is created and populated
+3. Players take turns moving pieces
+4. move() validates and updates board
+5. drawBoard() renders updated state
+
+Rendering:
+- Board is stored as dictionary of squares
+- Each square contains position and piece
+- drawBoard() prints grid in console
+
+Key Logic:
+- isSquareValid → validates movement rules
+- selfCheck → prevents illegal king moves
+- getValidMoves → defines piece movement rules
