@@ -260,6 +260,8 @@ class Piece:
             print("Not your piece")
             return False
         validMoves = self.getValidMoves(board)
+        # Checks if move puts king in danger
+        def selfCheck(self, board, square):
         if square in validMoves:
             #Remove Piece from current square
             board.getSquareAtPos(self.position).occupied = None
