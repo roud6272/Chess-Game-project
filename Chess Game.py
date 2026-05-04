@@ -541,8 +541,14 @@ def startGame():
 
     gameOver = False
     whiteTurn = True
+    whiteTime = 600
+    blackTime = 600
     while not gameOver:
         moveHistory = []
+        if whiteTurn:
+          whiteTime -= 1
+        else:
+            blackTime -= 1
         if (whiteTurn):
             move = input("White's move:")
             if (move == "end"):
