@@ -418,9 +418,9 @@ def drawBoard(board):
                 invrow = 7-y
                 square = board.getSquareAtPos([x, invrow])
                 if (square.occupied == None):
-                    print("|  " + square.color[0] + '  |', end = "")
+                    print("| " + square.color[0] + "  |", end="")
                 else:
-                    print("|" + square.occupied.name[0:4] + ' |', end = "")
+                    print("| " + square.occupied.name[0:4] + " |", end=" ")
                 if (x == 7):
                     print(" ")
     print(" ")
