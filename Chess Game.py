@@ -414,7 +414,7 @@ def drawBoard(board):
         for x in range(8):
             #If on the last row print guide letters
             if (y==8): 
-                print ("   " +numToLetter(x) + "   ", end = "")
+                print("   " + numToLetter(x) + "   ", end="")
             else:
                 invrow = 7-y
                 square = board.getSquareAtPos([x, invrow])
