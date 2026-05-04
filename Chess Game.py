@@ -271,6 +271,7 @@ class Piece:
                 # add 
             #Move Piece to new square
             self.position = square.position
+            square.occupied = self
             #Mark that square is occupied by this piece
             square.occupied = self
             return True
