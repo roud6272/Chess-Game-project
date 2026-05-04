@@ -16,4 +16,23 @@ A basic chess demonstration that sets up a board and provides simple move handli
 
 ## Summary
 This project is ideal for practicing data structures (board representation), rule-based checks and optionally integrating a GUI (Tkinter/Pygame) or implementing a simple AI opponent.
+Chess Game User Manual
 
+How to Play:
+- Players take turns moving pieces.
+- Move format: A2 A4
+  (From square → To square)
+
+Rules:
+- Pawns move forward only.
+- Diagonal move is allowed only when capturing.
+- King cannot move into check positions.
+
+Controls:
+- Type move to play.
+- Type "undo" to undo last move.
+- Type "end" to stop game.
+
+Board:
+- A to H columns
+- 1 to 8 rows
