@@ -59,6 +59,12 @@ class Board:
 
     def getSquareAtPos(self, pos):
         num = pos[0] * 8 + pos[1] 
+            # invalid position check first
+         if pos[0] < 0 or pos[0] > 7 or pos[1] < 0 or pos[1] > 7:
+            return None
+
+        num = pos[0] * 8 + pos[1]
+           return self.squares[num]
 
         #If pos is out of bounds then return None
         if (num > 63 or num < 0):
