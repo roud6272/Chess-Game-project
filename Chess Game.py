@@ -260,6 +260,7 @@ class Piece:
             #If square has an enemy piece on it, capture it
             if (square.occupied != None):
                 player.capturedPieces.append(square.occupied)
+                # add 
             #Move Piece to new square
             self.position = square.position
             #Mark that square is occupied by this piece
