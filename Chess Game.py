@@ -218,7 +218,7 @@ class Piece:
 
         #Pawns cannot move diagonally unless capturing
         if (piece == None and self.name == "Pawn" and 
-          gitif square.position[0] != self.position[0] and piece is None:
+          if square.position[0] != self.position[0] and piece is None:
             return False
         
         return True
@@ -249,6 +249,7 @@ class Piece:
     #Moves the piece to designated square if possible
     # returns True if move was valid, False if not
     def move(self, board, square, player):
+        board.moveHistory.append((self, self.position.copy(), square.occupied))
         if (self.color != player.color):
             print("Not your piece")
             return False
@@ -541,6 +542,7 @@ def startGame():
     gameOver = False
     whiteTurn = True
     while not gameOver:
+        moveHistory = []
         if (whiteTurn):
             move = input("White's move:")
             if (move == "end"):
