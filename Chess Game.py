@@ -218,7 +218,7 @@ class Piece:
 
         #Pawns cannot move diagonally unless capturing
         if (piece == None and self.name == "Pawn" and 
-        (square.position[0] == self.position[0] + 1 or square.position[0] == self.position[0] - 1)):
+          gitif square.position[0] != self.position[0] and piece is None:
             return False
         
         return True
